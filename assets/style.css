@@ -1,0 +1,26 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #ff4b8b;
+    margin-top: 20px;
+}
+
+.radio-group {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.chart-container {
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+}
