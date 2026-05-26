@@ -14,12 +14,15 @@ app = Dash(__name__)
 # App layout
 app.layout = html.Div([
 
-    html.H1("Soul Foods Pink Morsel Sales Dashboard"),
+    html.H1(
+        "Soul Foods Pink Morsel Sales Dashboard",
+        id="header"
+    ),
 
     html.Div([
 
         dcc.RadioItems(
-            id="region-filter",
+            id="region-picker",
             options=[
                 {"label": "All", "value": "all"},
                 {"label": "North", "value": "north"},
@@ -38,11 +41,10 @@ app.layout = html.Div([
     ], className="chart-container")
 
 ])
-
 # Callback for interactive filtering
 @app.callback(
     Output("sales-chart", "figure"),
-    Input("region-filter", "value")
+    Input("region-picker", "value")
 )
 def update_chart(selected_region):
 
